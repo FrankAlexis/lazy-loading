@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'autos-microfront';
+  handlerClick(page: string) {
+    document.cookie = `version=${page}`;
+    window.location.reload()
+  }
 }

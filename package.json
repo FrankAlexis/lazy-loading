@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run serve:single-spa",
+    "serve:single-spa": "ng serve --disable-host-check --port 4201 --deploy-url http://localhost:4201/ --live-reload false",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
     "rxjs": "~6.5.4",
+    "single-spa": "^5.5.0",
+    "single-spa-angular": "^4.0.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },
